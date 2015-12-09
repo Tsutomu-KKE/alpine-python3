@@ -15,7 +15,7 @@ RUN apk add --update musl python3-dev freetype-dev make g++ gfortran wget && \
     cp ~/src/lapack-3.5.0/liblapack.a /usr/local/lib && \
     pip3 install -U pip && \
     pip install numpy==1.9.3 && \
-    pip install scipy matplotlib jupyter networkx pandas pulp \
+    pip install scipy matplotlib jupyter networkx pandas \
         scikit-learn blist bokeh statsmodels seaborn dask sympy && \
     unzip -q ipaexg00301.zip && \
     mv ipaexg00301/ipaexg.ttf /usr/lib/python3.4/site-packages/matplotlib/mpl-data/fonts/ttf/ && \
