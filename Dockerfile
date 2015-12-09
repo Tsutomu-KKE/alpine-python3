@@ -19,6 +19,7 @@ RUN apk add --update musl python3-dev freetype-dev make g++ gfortran wget && \
         scikit-learn blist bokeh statsmodels seaborn dask sympy && \
     unzip -q ipaexg00301.zip && \
     mv ipaexg00301/ipaexg.ttf /usr/lib/python3.4/site-packages/matplotlib/mpl-data/fonts/ttf/ && \
-    apk del freetype-dev && \
+    apk del g++ freetype-dev python3-dev && \
+    apk add python3 && \
     rm -rf /var/cache/apk/* /tmp/* /root/src/
 CMD ["sh"]
